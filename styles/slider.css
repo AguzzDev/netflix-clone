@@ -1,0 +1,134 @@
+.netflix-slider .swiper{
+  position:relative;
+}
+
+.netflix-slider .swiper-button-next,
+.netflix-slider .swiper-button-prev{
+  position: absolute;
+  top: 2.6rem;
+  width:5.05rem;
+  height:8.2rem;
+  opacity:0%;
+}
+
+.netflix-slider .swiper-button-prev::after{
+  content:"";
+  width:50px;
+  height:50px;
+  background-image: url("/left.svg") !important;
+background-repeat:no-repeat;
+}
+.netflix-slider .swiper-button-next::after{
+  content:"";
+  width:50px;
+  height:50px;
+  background-image: url("/right.svg") !important;
+  background-repeat:no-repeat;
+}
+
+.netflix-slider .swiper-button-next.swiper-button-disabled,.netflix-slider .swiper-button-prev.swiper-button-disabled {
+  opacity:0 !important;
+}
+.netflix-slider .swiper-button-next:hover,
+.netflix-slider .swiper-button-prev:hover{
+  opacity:80%;
+  -webkit-transition: 350ms all;
+  transition: 350ms all;
+  transition: 0.3s ease 0s;
+}
+
+.netflix-slider .swiper-wrapper {
+  padding: 20px 0;
+}
+.netflix-slider .swiper-wrapper:hover .swiper-slide{
+opacity:30%;
+}
+.netflix-slider .swiper-wrapper:hover .swiper-slide:hover{
+  opacity:100%;
+}
+
+.netflix-slider .swiper-slide {
+  -webkit-transition: 350ms all;
+  transition: 350ms all;
+  transition: 0.3s ease 0s;
+}
+
+.netflix-slider .swiper-slide:hover {
+  transform: scale(1.2);
+  z-index: 1;
+  margin-left: 40px !important;
+  margin-right: 49px !important;
+}
+
+.netflix-slider .swiper-slide:first-child:hover {
+  margin: 0 40px;
+}
+
+.netflix-slider .swiper-slide:last-child:hover {
+  margin: 0 -40px;
+}
+/* ------- */
+.netflix-slider-2 .swiper{
+  position:relative;
+}
+
+.netflix-slider-2 .swiper-button-next,
+.netflix-slider-2 .swiper-button-prev{
+  position: absolute;
+  top: 3.85rem;
+  width:5.6rem;
+  height:22.15rem;
+  opacity:0%;
+}
+
+.netflix-slider-2 .swiper-button-prev::after{
+  content:"";
+  width:50px;
+  height:50px;
+  background-image: url("/left.svg") !important;
+background-repeat:no-repeat;
+}
+.netflix-slider-2 .swiper-button-next::after{
+  content:"";
+  width:50px;
+  height:50px;
+  background-image: url("/right.svg") !important;
+  background-repeat:no-repeat;
+}
+
+.netflix-slider-2 .swiper-button-next.swiper-button-disabled,.netflix-slider-2 .swiper-button-prev.swiper-button-disabled {
+  opacity:0 !important;
+}
+.netflix-slider-2 .swiper-button-next:hover,
+.netflix-slider-2 .swiper-button-prev:hover{
+  opacity:80%;
+  -webkit-transition: 350ms all;
+  transition: 350ms all;
+  transition: 0.3s ease 0s;
+}
+
+.netflix-slider-2 .swiper-wrapper {
+  padding: 40px 0;
+}
+.netflix-slider-2 .swiper-wrapper:hover .swiper-slide{
+opacity:30%;
+}
+.netflix-slider-2 .swiper-wrapper:hover .swiper-slide:hover{
+  opacity:100%;
+}
+
+.netflix-slider-2 .swiper-slide {
+  -webkit-transition: 350ms all;
+  transition: 350ms all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease 0s;
+}
+
+.netflix-slider-2 .swiper-slide:hover {
+  transform: scale(1.2);
+  z-index: 1;
+  margin-left: 40px !important;
+  margin-right: 49px !important;
+}
