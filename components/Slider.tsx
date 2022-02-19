@@ -10,7 +10,7 @@ import { IconsXXS } from 'components/Icons'
 import FavouriteContext from 'context/Favourite/FavouriteContext'
 import { useRouter } from 'next/router'
 import { ModalDetails } from './Modal'
-import { AllMoviesProps, FavouriteProps } from 'types/types'
+import { AllMoviesProps } from 'types/types'
 
 SwiperCore.use([Navigation])
 
@@ -24,7 +24,7 @@ interface Props {
 export function Slider({ videos, width, height, size }: Props) {
   const router = useRouter()
 
-  const { favouriteList, addToFavourite, removeToFavourite, setButton2, button2 }: FavouriteProps = useContext(FavouriteContext)
+  const { favouriteList, addToFavourite, removeToFavourite, setButton2, button2 } = useContext(FavouriteContext)
 
   return (
     <>

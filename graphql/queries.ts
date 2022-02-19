@@ -181,9 +181,30 @@ export const FETCHING_QUERYS = gql`
       vote_average
       vote_count
      }
-  }
+  },
   }
 `;
 
-
+export const GET_SEARCH = gql`
+    query getSearch($query:String,$page:Int) {
+      search(query:$query,page:$page)@rest(path:"search/movie?api_key=2ef4837c731e20f8ed6a545c2d674df3&query={args.query}&page={args.page}", type:"search"){
+      results{
+        backdrop_path
+        first_air_date
+        genre_ids
+        id
+        name
+        title
+        origin_country
+        original_language
+        original_name
+        overview
+        popularity
+        poster_path
+        vote_average
+        vote_count
+      }
+    }
+  }
+`
 

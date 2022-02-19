@@ -4,12 +4,12 @@ import Modal from 'react-modal'
 
 import FavouriteContext from 'context/Favourite/FavouriteContext'
 import { IconsXXS } from './Icons'
-import { AllMoviesProps, FavouriteProps } from 'types/types'
+import { AllMoviesProps } from 'types/types'
 
 Modal.setAppElement('#__next')
 
 export const ModalDetails = ({ videos }: AllMoviesProps) => {
-  const { addToFavourite, setButton1, button1, setButton2, setButton3, button2, button3 }: FavouriteProps = useContext(FavouriteContext)
+  const { addToFavourite, setButton1, button1, setButton2, setButton3, button2, button3 } = useContext(FavouriteContext)
   const [modalIsOpen, setIsOpen] = useState<boolean>(false)
 
   function openModal() {

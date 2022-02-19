@@ -1,31 +1,11 @@
-import { Dispatch, ReactChild, ReactChildren, SetStateAction } from "react"
+import { ReactChild, ReactChildren } from "react"
 
 export interface PropsChildren {
   children: ReactChild | ReactChildren
 }
 
-export interface SearchProps {
-  search: MoviesProps[]
-  page: number
-  setPage: Dispatch<SetStateAction<string>>
-  setSearch: Dispatch<SetStateAction<MoviesProps[]>>
-}
-
-export interface FavouriteProps {
-  button1: boolean
-  button2: boolean
-  button3: boolean
-  setButton1: Dispatch<SetStateAction<boolean>>
-  setButton2: Dispatch<SetStateAction<boolean>>
-  setButton3: Dispatch<SetStateAction<boolean>>
-  favouriteList: MoviesProps[]
-  setFavouriteList: Dispatch<SetStateAction<MoviesProps[]>>
-  addToFavourite: (video: MoviesProps) => void
-  removeToFavourite: (video: MoviesProps) => void
-}
-
 export interface AllMoviesProps {
-  videos: MoviesProps
+  videos: MoviesProps;
 }
 
 export interface MoviesProps {

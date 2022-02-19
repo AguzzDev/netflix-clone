@@ -1,8 +1,8 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import type { NextPage } from "next"
+import Head from "next/head"
+import { useEffect, useState } from "react"
 
-import Loader from 'components/Loader'
+import Loader from "components/Loader"
 import Inicio from "components/Inicio"
 
 const Home: NextPage = () => {
@@ -12,9 +12,7 @@ const Home: NextPage = () => {
     setTimeout(() => {
       setLoading(false)
     }, 5700)
-
   }, [])
-
   return (
     <>
       <Head>
@@ -23,11 +21,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/nlogo.png" />
       </Head>
 
-      {loading
-        ? <Loader />
-        : <Inicio />
-      }
-
+      {loading ? <Loader /> : <Inicio />}
     </>
   )
 }

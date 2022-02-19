@@ -1,18 +1,18 @@
 import Image from "next/image"
 import { SearchIcon } from "@heroicons/react/outline"
 import Link from "next/link"
-import { useContext, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 
 import { IconsXS } from "./Icons"
-import SearchContext from "context/Search/SearchContext"
+import { useSearch } from "hooks/useSearch"
 
 export const Header = () => {
   const [scroll, setScroll] = useState<boolean>(false)
   const router = useRouter()
   const path = router.pathname
 
-  const { handleSearch, textRef } = useContext(SearchContext)
+  const { handleChange } = useSearch()
 
   useEffect(() => {
     window.onscroll = () => {
@@ -40,7 +40,7 @@ export const Header = () => {
           </Link>
 
 
-          <div className="hidden lg:flex items-center ml-10 space-x-6 pb-1">
+          <div className="items-center hidden pb-1 ml-10 space-x-6 lg:flex">
             <Link passHref href="/"><div className={`text-white ${path === "/" ? "font-bold" : "font-medium"} cursor-pointer xl:text-lg`}>Home</div></Link>
             <button><div className={`text-white ${path === "/tvseries" ? "font-bold" : "font-medium"} cursor-pointer xl:text-lg`}>TV Series</div></button>
             <button><div className={`text-white ${path === "/movies" ? "font-bold" : "font-medium"} cursor-pointer xl:text-lg`}>Movies</div></button>
@@ -52,10 +52,10 @@ export const Header = () => {
         {/* Right */}
         <div className="flex items-center space-x-6">
 
-          <div className="flex space-x-3 items-center justify-end group w-full">
+          <div className="flex items-center justify-end w-full space-x-3 group">
             <div className="flex items-center justify-end">
-              <div className="w-4/6 xl:w-full mr-3 border-2 border-white border-opacity-80 py-1 group-focus-visible:block rounded-md">
-                <input type="text" placeholder="Search movies..." ref={textRef} onChange={() => handleSearch()} className="text-white focus:outline-none bg-transparent px-2" />
+              <div className="w-4/6 py-1 mr-3 border-2 border-white rounded-md xl:w-full border-opacity-80 group-focus-visible:block">
+                <input type="text" placeholder="Search movies..." onChange={handleChange} className="px-2 text-white bg-transparent focus:outline-none" />
               </div>
               <div className="cursor-pointer">
                 <IconsXS Icon={SearchIcon} color="white" />
