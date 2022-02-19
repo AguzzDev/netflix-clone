@@ -18,13 +18,13 @@ function Loader() {
   return (
     <motion.div
       id="SplashAnimation__wrp"
-      className='SplashAnimation'
+      className="SplashAnimation"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
       <audio ref={soundRef} src="/intro-audio.mp3" />
-      <div className="netflixintro" letter="N">
+      <div className="netflixintro" data-letter="N">
         <div className="helper-1">
           <div className="effect-brush">
             <span className="fur-31"></span>
