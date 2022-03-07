@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import Head from "next/head"
 import { Waypoint } from "react-waypoint"
 
-import { Header } from "components/Header"
 import FavouriteContext from "context/Favourite/FavouriteContext"
 import { IconsXXS } from "components/Icons"
 import { PlusSmIcon } from "@heroicons/react/outline"

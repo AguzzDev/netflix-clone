@@ -5,7 +5,7 @@ import { CategorySmall } from "components/Categories/CategorySmall"
 import FavouriteContext from "context/Favourite/FavouriteContext"
 import { AllFavouriteProps } from "types/types"
 
-function myList() {
+function MyList() {
   const { favouriteList }: AllFavouriteProps = useContext(FavouriteContext)
 
   return (
@@ -24,4 +24,4 @@ function myList() {
   )
 }
 
-export default myList
+export default MyList
