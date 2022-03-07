@@ -14,7 +14,7 @@ import { useState } from "react"
 SwiperCore.use([Navigation])
 
 interface Props {
-  videos: AllMoviesProps
+  videos: AllMoviesProps | any
   width: string
   height: string
   size: string
