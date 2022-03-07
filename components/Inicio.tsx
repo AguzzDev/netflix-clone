@@ -16,11 +16,20 @@ function Inicio() {
 
       {!loading && (
         <>
-          <Frontpage videos={toRandomVideo(data.trendingWeek.results)} />
+          <Frontpage video={toRandomVideo(data.trendingWeek.results)} />
           <main>
-            <CategorySmall videos={data.trending.results} title="Top Rated on Netflix" />
-            <CategorySmall videos={data.trendingWeek.results} title="Trending Now" />
-            <CategoryLarge videos={data.original.results} title="Netflix Originals" />
+            <CategorySmall
+              videos={data.trending.results}
+              title="Top Rated on Netflix"
+            />
+            <CategorySmall
+              videos={data.trendingWeek.results}
+              title="Trending Now"
+            />
+            <CategoryLarge
+              videos={data.original.results}
+              title="Netflix Originals"
+            />
             <CategorySmall videos={data.action.results} title="Action" />
             <CategorySmall videos={data.adventure.results} title="Adventure" />
             <CategorySmall videos={data.comedy.results} title="Comedy" />
@@ -31,11 +40,8 @@ function Inicio() {
           </main>
         </>
       )}
-
     </main>
   )
 }
 
 export default Inicio
-
-

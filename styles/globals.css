@@ -1,21 +1,21 @@
-.navbar-false{
+.navbar-false {
   position: fixed;
   top: 0;
   z-index: 10;
   width: 100%;
-  background: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10%, transparent);
 }
 
-.navbar-true{
-  position:fixed;
-top:0;
-z-index:10;
-width:100%;
-background:black;
+.navbar-true {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background: black;
 }
 
 /* Modal */
-.ReactModalPortal > div{
+.ReactModalPortal > div {
   opacity: 0;
 }
 
@@ -36,28 +36,28 @@ background:black;
 
 .ReactModalPortal .ReactModal__Overlay--after-open {
   opacity: 1;
-  animation:animateOpen .2s;
+  animation: animateOpen 0.2s;
 }
 
 .ReactModalPortal .ReactModal__Overlay--before-close {
   opacity: 1;
-  animation:animateExit .2s;
+  animation: animateExit 0.2s;
 }
 
-@keyframes animateOpen{
-  0%{
-    transform:translateY(40%)
+@keyframes animateOpen {
+  0% {
+    transform: translateY(40%);
   }
-  100%{
-    transform:translateY(0px)
+  100% {
+    transform: translateY(0px);
   }
 }
-@keyframes animateExit{
-  0%{
-    transform:translateY(0px)
+@keyframes animateExit {
+  0% {
+    transform: translateY(0px);
   }
-  100%{
-    transform:translateY(100%)
+  100% {
+    transform: translateY(100%);
   }
 }
 @tailwind base;
@@ -69,8 +69,11 @@ background:black;
   src: url("./fonts/inter.woff2");
 }
 
-@layer components{
-  body{
-    @apply w-screen overflow-x-hidden font-inter bg-black1
+@layer components {
+  body {
+    @apply w-screen overflow-x-hidden font-inter bg-black1;
+  }
+  button {
+    @apply cursor-pointer;
   }
 }

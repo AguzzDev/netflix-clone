@@ -1,11 +1,25 @@
-import { ReactChild, ReactChildren } from "react"
+import { Dispatch } from "react"
+import { SetStateAction } from "react"
 
 export interface PropsChildren {
-  children: ReactChild | ReactChildren
+  children: JSX.Element | JSX.Element[]
 }
 
 export interface AllMoviesProps {
-  videos: MoviesProps;
+  videos?: MoviesProps[] | undefined
+  video?: MoviesProps | undefined
+}
+
+export interface AllFavouriteProps {
+  videos?: MoviesProps[]
+  favouriteList: any
+}
+
+export interface FavouriteProps {
+  favouriteList: MoviesProps[]
+  setFavouriteList: Dispatch<SetStateAction<MoviesProps[]>>
+  addToFavourite: (video: MoviesProps) => void
+  removeToFavourite: (video: MoviesProps) => void
 }
 
 export interface MoviesProps {

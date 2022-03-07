@@ -2,11 +2,11 @@ import { useContext } from "react"
 import Head from "next/head"
 
 import { CategorySmall } from "components/Categories/CategorySmall"
-import { Header } from "components/Header"
 import FavouriteContext from "context/Favourite/FavouriteContext"
+import { AllFavouriteProps } from "types/types"
 
 function myList() {
-  const { favouriteList }: any = useContext(FavouriteContext)
+  const { favouriteList }: AllFavouriteProps = useContext(FavouriteContext)
 
   return (
     <>
@@ -16,7 +16,6 @@ function myList() {
       </Head>
 
       <main>
-        <Header />
         <div className="pt-32">
           <CategorySmall videos={favouriteList} title="My List" />
         </div>
